@@ -204,7 +204,7 @@ h1, p {
   top: 0;
   left: 50px;
   width: 50%;
-  height: 100%;
+  height: 80%;
   text-decoration: none;
   background: #fff;
   border-radius: 8px;
@@ -278,8 +278,8 @@ h1, p {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   opacity: 0;
-  transition: 0.1s;  
-  animation: animate 12s ease-in-out infinite;
+  transition: all 0.5s ease; /* 添加过渡效果 */ 
+  animation: animate 2s ease-in-out infinite;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08)
 }
 
@@ -342,8 +342,10 @@ h1, p {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   z-index: 1;
-  transform: 0.5s;
+  /*transform: 0.5s;*/
+  transform: translateY(-35%); /* 向上移动文本框内容 */
   color: #fff;
+  transition: all 0.8s ease; /* 新增：让内容的尺寸变化平滑 */
 }
 
 .container1 .box:hover .content
