@@ -350,7 +350,32 @@ h1, p {
   transform: translateY(-35%); /* 向上移动文本框内容 */
   color: #fff;
   transition: all 0.8s ease; /* 新增：让内容的尺寸变化平滑 */
+  overflow: auto; /* 添加垂直滚动条 */
 }
+
+/* 滚动条样式 */
+.container1 .box .content::-webkit-scrollbar {
+    width: 12px; /* 滚动条的宽度 */
+  }
+  
+  /* 滚动条滑道 */
+  .container1 .box .content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); /* 滚动条的阴影 */ 
+    background: rgba(255, 255, 255, 0.05); /* 滚动条滑道的颜色，保持和文本框背景一致 */
+    border-radius: 8px; /* 圆角效果与文本框一致 */
+  }
+  
+  /* 滚动条的滑块 */
+  .container1 .box .content::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3); /* 滚动条的阴影 */
+    background: rgba(255, 255, 255, 0.2); /* 滑块的颜色，带有一定透明度 */
+    border-radius: 8px; /* 滑块也保持圆角效果 */
+  }
+  
+  /* 当滚动条被hover时，滑块的颜色变化 */
+  .container1 .box .content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4); /* 鼠标悬停时滑块的颜色变化 */
+  }
 
 .container1 .box:hover .content
 {
