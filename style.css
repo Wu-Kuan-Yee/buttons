@@ -188,8 +188,10 @@ h1, p {
 .container1 .box
 {
   position: relative;
-  width: 320px;
-  height: 400px;
+  /*width: 320px;
+  height: 400px;*/
+  width: 660px;  /* 增大容器的宽度 */
+  height: 500px; /* 增大容器的高度 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -343,6 +345,8 @@ h1, p {
   border-radius: 8px;
   z-index: 1;
   /*transform: 0.5s;*/
+  width: 660px; /* 增加文本框宽度 */
+  height: 300px; /* 增加文本框宽度 */
   transform: translateY(-35%); /* 向上移动文本框内容 */
   color: #fff;
   transition: all 0.8s ease; /* 新增：让内容的尺寸变化平滑 */
