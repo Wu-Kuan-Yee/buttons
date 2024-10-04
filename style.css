@@ -360,14 +360,14 @@ h1, p {
   
   /* 滚动条滑道 */
   .container1 .box .content::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); /* 滚动条的阴影 */ 
-    background: rgba(255, 255, 255, 0.05); /* 滚动条滑道的颜色，保持和文本框背景一致 */
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.0); /* 滚动条的阴影 */ 
+    background: rgba(255, 255, 255, 0.00); /* 滚动条滑道的颜色，保持和文本框背景一致 */
     border-radius: 8px; /* 圆角效果与文本框一致 */
   }
   
   /* 滚动条的滑块 */
   .container1 .box .content::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3); /* 滚动条的阴影 */
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .6); /* 滚动条的阴影 */
     background: rgba(255, 255, 255, 0.2); /* 滑块的颜色，带有一定透明度 */
     border-radius: 8px; /* 滑块也保持圆角效果 */
   }
