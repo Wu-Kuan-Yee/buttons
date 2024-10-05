@@ -417,3 +417,58 @@ h1, p {
   border: 1px solid rgba(255, 0, 88, 0.4);
   box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
 }
+
+/* Logo样式 */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* 根据需要调整与搜索框或按钮的间隔 */
+}
+
+.navbar .logo img {
+    height: 40px; /* 根据Logo的实际尺寸调整 */
+    object-fit: contain;
+}
+
+/* 搜索框样式 */
+.search-box {
+    position: relative; /* 定位父元素以便放置内部元素 */
+    width: 200px; /* 设置搜索框的宽度 */
+    margin: 0 20px; /* 增加搜索框与按钮的间距 */
+    border-radius: 25px; /* 圆角效果 */
+    overflow: hidden; /* 避免内部元素超出边界 */
+    background: rgba(255, 255, 255, 0.1); /* 背景颜色 */
+    backdrop-filter: blur(10px); /* 背景模糊效果 */
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3); /* 阴影效果 */
+}
+
+.search-box input {
+    width: 100%; /* 输入框占满整个搜索框 */
+    padding: 10px 20px; /* 内边距 */
+    border: none; /* 无边框 */
+    outline: none; /* 无轮廓 */
+    border-radius: 25px; /* 圆角效果 */
+    font-size: 1em; /* 字体大小 */
+    color: #fff; /* 字体颜色 */
+    background: transparent; /* 透明背景 */
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* 占位符颜色 */
+}
+
+.search-box button {
+    position: absolute; /* 定位按钮 */
+    right: 5px; /* 距离右侧5px */
+    top: 50%; /* 垂直居中 */
+    transform: translateY(-50%); /* 垂直居中 */
+    border: none; /* 无边框 */
+    background: transparent; /* 透明背景 */
+    cursor: pointer; /* 指针效果 */
+    color: #fff; /* 字体颜色 */
+    font-size: 1.5em; /* 字体大小 */
+}
+
+.search-box button:hover {
+    color: #ffcf4d; /* 鼠标悬停时的颜色变化 */
+}

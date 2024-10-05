@@ -6,28 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glassmorphism Button Top Navigation</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="navbar">
         <div class="container">
+            <div class="logo">
+                <img src="./sunwaybitslogo.svg" alt="Logo">
+            </div>
             <div class="btn"><a href="#">首页</a></div>
             <div class="btn"><a href="#">文章</a></div>
             <div class="btn"><a href="#">杂项</a></div>
+            <div class="search-box">
+                <input type="text" placeholder="搜索...">
+                <button type="submit">🔍</button>
+            </div>
         </div>
     </header>
 
-    <!-- 其他页面内容 -->
     <div class="container1">
-    <div class="box">
-        <span></span>
-    <div class="content">
-        <h1>Sunwaybits</h1>
-        <p><b>三维笔记</b></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae aspernatur, reprehenderit, labore deserunt animi voluptatum aut quisquam dolorum beatae nisi perferendis similique! At amet, distinctio unde laboriosam velit odio necessitatibus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae aspernatur, reprehenderit, labore deserunt animi voluptatum aut quisquam dolorum beatae nisi perferendis similique! At amet, distinctio unde laboriosam velit odio necessitatibus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae aspernatur, reprehenderit, labore deserunt animi voluptatum aut quisquam dolorum beatae nisi perferendis similique! At amet, distinctio unde laboriosam velit odio necessitatibus.</p>
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h1>Sunwaybits</h1>
+                <p><b>三维笔记</b></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae aspernatur, reprehenderit, labore deserunt animi voluptatum aut quisquam dolorum beatae nisi perferendis similique! At amet, distinctio unde laboriosam velit odio necessitatibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae aspernatur, reprehenderit, labore deserunt animi voluptatum aut quisquam dolorum beatae nisi perferendis similique! At amet, distinctio unde laboriosam velit odio necessitatibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae aspernatur, reprehenderit, labore deserunt animi voluptatum aut quisquam dolorum beatae nisi perferendis similique! At amet, distinctio unde laboriosam velit odio necessitatibus.</p>
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
+
+    <script>
+        function toggleSearch() {
+            const input = document.querySelector('.search-input');
+            input.classList.toggle('active');
+            if (input.classList.contains('active')) {
+                input.focus(); // 聚焦输入框
+            }
+        }
+    </script>
 </body>
 </html>
