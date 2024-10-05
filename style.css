@@ -15,7 +15,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(to bottom, #5d326c, #350048); /*fiolet*/
-    width: 100%;
+    width: 100vw;
 }
 
 .navbar {
