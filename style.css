@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    /*font-family: "Roboto", sans-serif;*/
+    font-family: serif;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(to bottom, #5d326c, #350048); /*fiolet*/
+    width: 100%;
 }
 
 .navbar {
@@ -27,6 +29,7 @@ body {
     position: fixed;
     top: 50px; /* 调整顶栏距离顶部的距离 */
     z-index: 1000; /* 顶栏的 z-index */
+    margin: -10px 0;
 }
 
 .container {
@@ -196,7 +199,7 @@ h1, p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 30px;
+  margin: 40px 0;
   transition: 0.5s;
 }
 
@@ -436,9 +439,9 @@ h1, p {
     align-items: center;
     width: 40px; /* 根据需要调整 */
     height: 40px; /* 根据需要调整 */
-    border-radius: 50%;
+    border-radius: 100%;
     backdrop-filter: blur(10px); /* 毛玻璃效果 */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 1); /* 阴影效果 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* 阴影效果 */
     overflow: hidden;
 }
 .logo {
@@ -453,7 +456,7 @@ h1, p {
     height: 45px;
     max-width: 0; /* 未展开状态的最大宽度为0 */
     width: 100%;
-    margin: 0 40px;
+    margin: 0 25px;
     border-radius: 30px; /* 与按钮相同的圆角 */
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px);
@@ -533,17 +536,6 @@ input {
     pointer-events: auto;
     transform: translateY(-50%) rotate(180deg);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .btn1 {
     position: relative;
@@ -647,15 +639,17 @@ input {
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3); /* 阴影 */
     backdrop-filter: blur(15px); /* 毛玻璃效果 */
     border-radius: 10px; /* 圆角 */
-    padding: 20px; /* 内边距 */
-    margin-top: 20px; /* 与其他内容的间距 */
+    padding: 0px 50px; /* 内边距 */
+    margin-top: -160px; /* 与其他内容的间距 */
+    margin-left: 20px;
     max-width: 400px; /* 最大宽度 */
     transition: all 0.3s ease-in-out;
+    height: 350px !important;
 }
 
 .form:hover {
-    transform: scale(1.05);
-    border: 1px solid black;
+    /*transform: scale(1.05);*/
+    /*border: 1px solid black;*/
   }
 
 #heading {
@@ -675,7 +669,7 @@ input {
     outline: none;
     color: white;
     box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-    padding-left: 20px;
+    padding-left: 15px;
     margin: 10px 0px;
   }
 
@@ -692,7 +686,7 @@ input {
     padding: 10px; /* 内边距 */
     color: white; /* 字体颜色 */
     width: calc(100% - 20px); /* 自适应宽度 */
-    margin: 10px 0; /* 上下间距 */
+    margin: 0px 0; /* 上下间距 */
 }
 
 .form .btn1 {
