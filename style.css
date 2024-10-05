@@ -431,25 +431,23 @@ h1, p {
 }
 
 /* 搜索框样式 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 .input-box {
     position: relative;
     height: 45px;
-    max-width: 5px;
+    max-width: 0; /* 未展开状态的最大宽度为0 */
     width: 100%;
     margin: 0 40px;
     border-radius: 30px; /* 与按钮相同的圆角 */
-    background: rgba(255, 255, 255, 0.05); /* 与按钮相同的背景颜色 */
-    backdrop-filter: blur(15px); /* 与按钮相同的毛玻璃效果 */
-    -webkit-backdrop-filter: blur(15px); /* 对于 Safari 和 Chrome */
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3); /* 与按钮相同的阴影效果 */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* 与按钮相同的底部边框 */
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* 与按钮相同的顶部边框 */
-    transition: all 0.6s cubic-bezier(0.21, 1.24, 0.39, 1.25);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: max-width 0.6s cubic-bezier(0.21, 1.24, 0.39, 1.25); /* 过渡效果 */
 }
 
 .input-box.open {
-    max-width: 350px;
+    max-width: 350px; /* 展开后的最大宽度 */
     padding: 0 15px 0 65px;
 }
 
@@ -458,7 +456,7 @@ input {
     outline: none;
     border: none;
     height: 100%;
-    width: 104%;
+    width: 100%;
     border-radius: 30px; /* 与按钮相同的圆角 */
     font-size: 16px;
     font-weight: 400;
