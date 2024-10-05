@@ -431,44 +431,89 @@ h1, p {
 }
 
 /* 搜索框样式 */
-.search-box {
-    position: relative; /* 定位父元素以便放置内部元素 */
-    width: 200px; /* 设置搜索框的宽度 */
-    margin: 0 20px; /* 增加搜索框与按钮的间距 */
-    border-radius: 25px; /* 圆角效果 */
-    overflow: hidden; /* 避免内部元素超出边界 */
-    background: rgba(255, 255, 255, 0.1); /* 背景颜色 */
-    backdrop-filter: blur(10px); /* 背景模糊效果 */
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3); /* 阴影效果 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+.input-box {
+    position: relative;
+    height: 45px;
+    max-width: 5px;
+    width: 100%;
+    margin: 0 40px;
+    border-radius: 30px; /* 与按钮相同的圆角 */
+    background: rgba(255, 255, 255, 0.05); /* 与按钮相同的背景颜色 */
+    backdrop-filter: blur(15px); /* 与按钮相同的毛玻璃效果 */
+    -webkit-backdrop-filter: blur(15px); /* 对于 Safari 和 Chrome */
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3); /* 与按钮相同的阴影效果 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* 与按钮相同的底部边框 */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* 与按钮相同的顶部边框 */
+    transition: all 0.6s cubic-bezier(0.21, 1.24, 0.39, 1.25);
 }
 
-.search-box input {
-    width: 100%; /* 输入框占满整个搜索框 */
-    padding: 10px 20px; /* 内边距 */
-    border: none; /* 无边框 */
-    outline: none; /* 无轮廓 */
-    border-radius: 25px; /* 圆角效果 */
-    font-size: 1em; /* 字体大小 */
-    color: #fff; /* 字体颜色 */
-    background: transparent; /* 透明背景 */
+.input-box.open {
+    max-width: 350px;
+    padding: 0 15px 0 65px;
 }
 
-.search-box input::placeholder {
-    color: rgba(255, 255, 255, 0.7); /* 占位符颜色 */
+input {
+    position: relative;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 104%;
+    border-radius: 30px; /* 与按钮相同的圆角 */
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    background: transparent; /* 背景透明 */
 }
 
-.search-box button {
-    position: absolute; /* 定位按钮 */
-    right: 5px; /* 距离右侧5px */
-    top: 50%; /* 垂直居中 */
-    transform: translateY(-50%); /* 垂直居中 */
-    border: none; /* 无边框 */
-    background: transparent; /* 透明背景 */
-    cursor: pointer; /* 指针效果 */
-    color: #fff; /* 字体颜色 */
-    font-size: 1.5em; /* 字体大小 */
+.icon {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 60px;
+    border-radius: 30px; /* 与按钮相同的圆角 */
+    background: rgba(255, 255, 255, 0.05); /* 与按钮相同的背景颜色 */
+    backdrop-filter: blur(15px); /* 与按钮相同的毛玻璃效果 */
+    -webkit-backdrop-filter: blur(15px); /* 对于 Safari 和 Chrome */
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3); /* 与按钮相同的阴影效果 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* 与按钮相同的底部边框 */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* 与按钮相同的顶部边框 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.search-box button:hover {
-    color: #ffcf4d; /* 鼠标悬停时的颜色变化 */
+.search-icon,
+.close-icon {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    color: #cecece;
+    transform: translateY(-50%);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-icon {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.input-box.open .search-icon {
+    transform: translateY(-50%) rotate(0);
+}
+
+.close-icon {
+    right: -45px;
+    color: #fff;
+    padding: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.input-box.open .close-icon {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) rotate(180deg);
 }
